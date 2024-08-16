@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+section {
+  margin: 36px 48px;
+  padding: 12px;
+  border: 3px solid aliceblue;
+  border-radius: 2%;
+  box-sizing: border-box;
+  max-width: 500px;
+  position: relative;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+   /* insetは、top, right, bottom, left に対応する一括指定 */
+  inset: auto 16px 4px auto;
+  animation: blink-caret step-end 1.5s infinite;
+}
+/* アニメーションを定義する */
+/* 0% と 100%の状態を省略すると、元のスタイルを指定したことになる。 */
+@keyframes blink-caret {
+  from, to {opacity: 1;} 50% {opacity: 0}
+}
+
+#end {
+  animation: none;
+}
+
+.hidden {
+  display: none;
+}
